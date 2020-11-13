@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script  src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+Supplier ID: <input type="text" id="sid" value="101"/><br/>
+Supplier Name: <input type="text" id="sname" value="Acer Computer Inc.,"/><br/>
+city: <input type="text" id="city" value="Taipei"/><br/>
+street: <input type="text" id="street" value="magic road"/><br/>
+state: <input type="text" id="state" value="TW"/><br/>
+zip: <input type="text" id="zip" value="111"/><p>
+<button id="add" >Add</button> 
+<button id="update" >update</button> 
+<button id="remove" >delete</button>
+<button id="find" >Find Coffee</button>
+<p>
+<div id="message"></div>
+<script>
+    function result(data){
+    	$("#message").html(data);
+    }
+    function add(){
+    	var  id= $("#sid").val();
+    	var  sname= $("#sname").val();
+    	var  city= $("#city").val();
+    	var  street= $("#street").val();
+    	var  state= $("#state").val();
+    	var  zip= $("#zip").val();
+    	
+    	$.post("SupplierServlet",{"id":id ,"sname":sname,"city":city,"street":street,"state":state,"zip":zip,"method":"add"},result);    	
+    }
+    function update(){
+    
+    }
+    function remove(){
+    }
+    function find(){
+    }
+    function events(){
+    	$("#add").click(add);
+    	$("#update").click(update);
+    	$("#remove").click(remove);
+    	$("#find").click(find);
+    }
+   $(document).ready(events);
+   </script>
+</body>
+</html>

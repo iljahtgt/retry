@@ -1,0 +1,26 @@
+*{
+	 margin:0;
+	 padding:0;
+	 font-family:Century Gothic;
+}
+
+header{
+	background-image:url(https://image.cache.storm.mg/styles/smg-800x533-fp/s3/media/image/2020/11/05/20201105-110756_U1085_M651022_6331.jpg?itok=hclVIxAT);
+	height:100%;
+	background-size:cover;
+	background-position:center;
+}
+ul{
+	float:right;
+	list-style-type:none;
+}
+ul li{
+	display:inline-block;
+	
+}
+ul li a{
+	text-decoration:none;
+	color:#fff;
+	padding:5px 20px;
+	border:1px solid #fff
+}
